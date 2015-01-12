@@ -2,10 +2,11 @@ class CreaturesController < ApplicationController
 
   def index
     @creatures = Creature.all
+    # @creature = Team.new()
   end
 
   def new
-    @creature = Creature.new
+    @creature = Creature.new()
   end
 
   def edit
@@ -20,6 +21,12 @@ class CreaturesController < ApplicationController
 
   def show
     @creature = Creature.find(params[:id])
+    name = Creature.find(params[:id]).name
+
+    list = flickr.photos.search :text => name, :sort => "relevance", :per_page => 20
+    @results = list.map do |photo|
+      FlickRaw.url_s(photo)
+    end
   end
 
   def create
@@ -36,8 +43,9 @@ class CreaturesController < ApplicationController
   end
 
   private
-    def creature_params
-      params.require(:creature).permit(:name, :desc)
-    end
+
+  def creature_params
+    params.require(:creature).permit(:name, :desc)
+  end
 
 end

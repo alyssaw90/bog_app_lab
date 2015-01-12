@@ -12,6 +12,14 @@
     <%= @creature.desc %> 
   </p>
 
+  <p>
+    <strong>Photo:</strong>
+    <% @results.each do |photo|%>
+      <% large = photo.gsub("_s","")%>
+      <%= link_to image_tag(photo, :class => "thumbnail"), large%>
+    <% end %>
+  </p>
+
   <%= link_to 'Back to all Creatures', creatures_path %>
 
 </div>
