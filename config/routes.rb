@@ -3,10 +3,9 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index'
 
-  match '/404', to: 'errors#file_not_found', via: :all
-  match '/424', to: 'errors#unprocessable', via: :all
-  match '/500', to: 'errors#internal_server_error', via: :all
   resources :creatures
+
+  get '*path', to: "application#not_found"
   
 
   # The priority is based upon order of creation: first created -> highest priority.

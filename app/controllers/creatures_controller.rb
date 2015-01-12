@@ -20,13 +20,17 @@ class CreaturesController < ApplicationController
   end
 
   def show
-    @creature = Creature.find(params[:id])
-    name = Creature.find(params[:id]).name
+    @creature = Creature.find_by_id(params[:id])
+    not_found unless @creature
 
+    name = Creature.find(params[:id]).name
     list = flickr.photos.search :text => name, :sort => "relevance", :per_page => 20
     @results = list.map do |photo|
       FlickRaw.url_s(photo)
     end
+    @response = RestClient.get 'http://www.reddit.com/search.json', {:params => {:q => name, :limit => 10}}
+    @response_object = JSON.parse(@response)
+    @reddit_posts = @response_object['data']['children']
   end
 
   def create

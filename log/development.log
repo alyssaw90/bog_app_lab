@@ -7684,3 +7684,1104 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-11 21:34:18
 
 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-11 21:34:18 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-11 21:47:22 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 79ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-11 21:47:23 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-11 21:47:23 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-11 21:47:23 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-11 21:47:23 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-11 21:47:23 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-11 21:47:28 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-11 21:47:34 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4577ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-11 21:47:46 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 75ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/creatures" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yy6tMRFkQFEGKUiMrF2khaHENnezF/DJGaALdQAb3Rk=", "creature"=>{"name"=>"German Shepard", "desc"=>"Police dog"}, "commit"=>"Create Creature"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCreature Exists (0.2ms)[0m  SELECT  1 AS one FROM "creatures"  WHERE LOWER("creatures"."name") = LOWER('German Shepard') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "creatures" ("created_at", "desc", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-01-12 05:48:05.220901"], ["desc", "Police dog"], ["name", "German Shepard"], ["updated_at", "2015-01-12 05:48:05.220901"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 26ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:05 -0800
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-11 21:48:07 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered creatures/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1664ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-11 21:48:22 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/5/edit" for 127.0.0.1 at 2015-01-11 21:48:29 -0800
+Processing by CreaturesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered creatures/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/creatures/5" for 127.0.0.1 at 2015-01-11 21:48:30 -0800
+Processing by CreaturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yy6tMRFkQFEGKUiMrF2khaHENnezF/DJGaALdQAb3Rk=", "creature"=>{"name"=>"German Shepard", "desc"=>"Police dog"}, "commit"=>"Save Creature", "id"=>"5"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCreature Exists (0.2ms)[0m  SELECT  1 AS one FROM "creatures"  WHERE (LOWER("creatures"."name") = LOWER('German Shepard') AND "creatures"."id" != 5) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures/5
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-11 21:48:30 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered creatures/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1410ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-11 21:48:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:32 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:32 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-11 21:48:37 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (7.7ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 7.7ms)
+
+
+Started DELETE "/creatures/5" for 127.0.0.1 at 2015-01-11 21:48:41 -0800
+Processing by CreaturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yy6tMRFkQFEGKUiMrF2khaHENnezF/DJGaALdQAb3Rk=", "id"=>"5"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "creatures" WHERE "creatures"."id" = ?[0m  [["id", 5]]
+  [1m[35m (8.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 11ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-11 21:48:41 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:41 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-11 21:48:42 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:42 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:42 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-11 21:48:42 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 09:30:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 88ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:30:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:30:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:30:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:30:06 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:30:06 -0800
+
+
+Started GET "/creatures/index" for 127.0.0.1 at 2015-01-12 09:30:08 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 09:30:13 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.4ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1872ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:30:22 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-12 09:30:23 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:30:24 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:31:52 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:31:52 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:31:52 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:31:52 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:31:52 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:31:52 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 09:32:08 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures/index" for 127.0.0.1 at 2015-01-12 09:32:50 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 09:32:55 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1208ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:33:13 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/4/edit" for 127.0.0.1 at 2015-01-12 09:33:19 -0800
+Processing by CreaturesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered creatures/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/creatures/4" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+Processing by CreaturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hu+Inww6EWIoR/3uVLwHQ7ODGr1eFRS8KTJhbPkLIeM=", "creature"=>{"name"=>"Monkey", "desc"=>"Silly"}, "commit"=>"Save Creature", "id"=>"4"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCreature Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "creatures"  WHERE (LOWER("creatures"."name") = LOWER('Monkey') AND "creatures"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures/4
+Completed 302 Found in 17ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/creatures/4" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered creatures/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 711ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:22 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:33:28 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/creatures/4" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+Processing by CreaturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hu+Inww6EWIoR/3uVLwHQ7ODGr1eFRS8KTJhbPkLIeM=", "id"=>"4"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "creatures" WHERE "creatures"."id" = ?  [["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 15ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:33:32 -0800
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-12 09:33:56 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:33:58 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-12 09:34:01 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:34:02 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-12 09:34:03 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-12 09:34:04 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:34:06 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 09:34:09 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 09:35:22 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 09:35:24 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creatures/index" for 127.0.0.1 at 2015-01-12 09:40:02 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/3/edit" for 127.0.0.1 at 2015-01-12 09:41:27 -0800
+Processing by CreaturesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered creatures/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/creatures/3" for 127.0.0.1 at 2015-01-12 09:41:39 -0800
+Processing by CreaturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hu+Inww6EWIoR/3uVLwHQ7ODGr1eFRS8KTJhbPkLIeM=", "creature"=>{"name"=>"Dog", "desc"=>"Best friend, furry, cute"}, "commit"=>"Save Creature", "id"=>"3"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCreature Exists (0.2ms)[0m  SELECT  1 AS one FROM "creatures"  WHERE (LOWER("creatures"."name") = LOWER('Dog') AND "creatures"."id" != 3) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "creatures" SET "desc" = ?, "updated_at" = ? WHERE "creatures"."id" = 3[0m  [["desc", "Best friend, furry, cute"], ["updated_at", "2015-01-12 17:41:39.395753"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures/3
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 09:41:39 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.3ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1159ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:41:40 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:41:40 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:41:40 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:41:40 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:41:40 -0800
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 09:42:17 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 793ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:18 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:18 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:18 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:18 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:42:18 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:42:19 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:42:29 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:29 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:42:29 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:29 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:29 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:29 -0800
+
+
+Started GET "/creatures/new" for 127.0.0.1 at 2015-01-12 09:42:37 -0800
+Processing by CreaturesController#new as HTML
+  Rendered creatures/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/creatures" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+Processing by CreaturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hu+Inww6EWIoR/3uVLwHQ7ODGr1eFRS8KTJhbPkLIeM=", "creature"=>{"name"=>"Alyssa", "desc"=>"Awesome person"}, "commit"=>"Create Creature"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCreature Exists (0.1ms)[0m  SELECT  1 AS one FROM "creatures"  WHERE LOWER("creatures"."name") = LOWER('Alyssa') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "creatures" ("created_at", "desc", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2015-01-12 17:42:48.853927"], ["desc", "Awesome person"], ["name", "Alyssa"], ["updated_at", "2015-01-12 17:42:48.853927"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/creatures
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 09:42:48 -0800
+
+
+Started GET "/creatures/6" for 127.0.0.1 at 2015-01-12 09:42:50 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered creatures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 496ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/6" for 127.0.0.1 at 2015-01-12 10:13:08 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  Rendered creatures/show.html.erb within layouts/application (476.1ms)
+Completed 200 OK in 1613ms (Views: 570.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:13:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:13:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:13:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:13:10 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:13:10 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 10:13:15 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:13:16 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 862ms (Views: 70.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:14:14 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (249.9ms)
+Completed 200 OK in 1031ms (Views: 279.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:14:15 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:14:15 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:14:15 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:14:15 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:14:15 -0800
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:24:07 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+Completed 500 Internal Server Error in 747ms
+
+NameError (undefined local variable or method `search_term' for #<CreaturesController:0x007fa7b882b768>):
+  app/controllers/creatures_controller.rb:30:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:24:35 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 2426ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:24:38 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:24:38 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:24:38 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:24:38 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:24:38 -0800
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:25:55 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 1801ms (Views: 35.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:25:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:25:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:25:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:25:56 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:25:56 -0800
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:27:53 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1960ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:27:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:27:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:27:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:27:55 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:27:55 -0800
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-12 10:28:00 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Creature with 'id'=5):
+  app/controllers/creatures_controller.rb:23:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.9ms)
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-12 10:28:38 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Creature with 'id'=5):
+  app/controllers/creatures_controller.rb:23:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-12 10:28:41 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Creature with 'id'=5):
+  app/controllers/creatures_controller.rb:23:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:28:44 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Completed 404 Not Found in 5ms
+
+ActionController::RoutingError (Not Found):
+  app/controllers/application_controller.rb:7:in `not_found'
+  app/controllers/creatures_controller.rb:25:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (51.7ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:28:54 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Completed 404 Not Found in 3ms
+
+ActionController::RoutingError (Not Found):
+  app/controllers/application_controller.rb:7:in `not_found'
+  app/controllers/creatures_controller.rb:25:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.1ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:28:54 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Completed 404 Not Found in 2ms
+
+ActionController::RoutingError (Not Found):
+  app/controllers/application_controller.rb:7:in `not_found'
+  app/controllers/creatures_controller.rb:25:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:29:23 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Completed 500 Internal Server Error in 30068ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/creatures_controller.rb:27:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:29:53 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", "3"]]
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-12 10:30:21 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 64ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:30:21 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:30:21 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:30:21 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:30:21 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:30:21 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 10:30:24 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.2ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:30:26 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered creatures/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2134ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/creatures/4" for 127.0.0.1 at 2015-01-12 10:30:32 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Creature with 'id'=4):
+  app/controllers/creatures_controller.rb:23:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 10:30:56 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 10:33:33 -0800
+Processing by CreaturesController#index as HTML
+  [1m[36mCreature Load (0.3ms)[0m  [1mSELECT "creatures".* FROM "creatures"[0m
+  Rendered creatures/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:33 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:33 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:33 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:33 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:33:33 -0800
+
+
+Started GET "/creatures" for 127.0.0.1 at 2015-01-12 10:33:35 -0800
+Processing by CreaturesController#index as HTML
+  [1m[35mCreature Load (0.1ms)[0m  SELECT "creatures".* FROM "creatures"
+  Rendered creatures/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:33:35 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:35 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:35 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:35 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:33:35 -0800
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:33:36 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = 3 LIMIT 1[0m
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered creatures/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2595ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-12 10:33:42 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = 5 LIMIT 1[0m
+  [1m[35mCreature Load (0.1ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1  [["id", 5]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Creature with 'id'=5):
+  app/controllers/creatures_controller.rb:24:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/creatures/5" for 127.0.0.1 at 2015-01-12 10:34:15 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCreature Load (0.1ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = 5 LIMIT 1[0m
+Completed 404 Not Found in 4ms
+
+ActionController::RoutingError (Not Found):
+  app/controllers/application_controller.rb:7:in `not_found'
+  app/controllers/creatures_controller.rb:24:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.3ms)
+
+
+Started GET "/creatures/3" for 127.0.0.1 at 2015-01-12 10:34:26 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCreature Load (0.3ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = 3 LIMIT 1
+  [1m[36mCreature Load (0.2ms)[0m  [1mSELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered creatures/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1160ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-12 10:34:27 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-12 10:34:27 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-12 10:34:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 10:34:27 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-12 10:34:27 -0800
+
+
+Started GET "/creatures/asdfasdf" for 127.0.0.1 at 2015-01-12 10:34:43 -0800
+Processing by CreaturesController#show as HTML
+  Parameters: {"id"=>"asdfasdf"}
+  [1m[35mCreature Load (0.2ms)[0m  SELECT  "creatures".* FROM "creatures"  WHERE "creatures"."id" = 0 LIMIT 1
+Completed 404 Not Found in 2ms
+
+ActionController::RoutingError (Not Found):
+  app/controllers/application_controller.rb:7:in `not_found'
+  app/controllers/creatures_controller.rb:24:in `show'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/asdfalskjdfasd" for 127.0.0.1 at 2015-01-12 10:34:48 -0800
+
+ActionController::RoutingError (No route matches [GET] "/asdfalskjdfasd"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.7ms)
+
+
+Started GET "/sdfdsaf" for 127.0.0.1 at 2015-01-12 10:36:00 -0800
+Processing by ApplicationController#not_found as HTML
+  Parameters: {"path"=>"sdfdsaf"}
+Completed 404 Not Found in 1ms
+
+ActionController::RoutingError (Not Found):
+  app/controllers/application_controller.rb:7:in `not_found'
+
+
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/alyssawilliams/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.5ms)
