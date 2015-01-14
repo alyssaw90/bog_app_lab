@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :creatures
 
+  get '/creatures/tag/:tag' => 'creatures#tag', as: :tag
+
   get '*path', to: "application#not_found"
   
 

@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-md-3">
 
   <p>
     <h2>Show Page</h2>
@@ -23,15 +23,22 @@
 
 </div>
 
-<div class="col-md-4">
+<div class="col-md-3">
 
 <% @reddit_posts.each do |post|%> 
   <li><%= link_to post['data']['title'], "http://www.reddit.com#{post['data']['permalink']}"%></li>
 <% end %>
 
 </div>
+
+<div class="col-md-3">
+  <% @creature.tags.each do |tag|%>
+    <%= link_to tag.name, tag_path(tag.name)%>
+  <% end %>
+</div>
+
   
-  <%= link_to 'Back to all Creatures', creatures_path %>
+<%= link_to 'Back to all Creatures', creatures_path %>
 
 </div>
 </div>

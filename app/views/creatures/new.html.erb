@@ -3,10 +3,15 @@
 
 <h2>Add New Creature</h2>
 <br>
-<div class="form-group">
-<%= form_for @creature, html: {class: "form"} do |f| %>
+<div>
+<%= bootstrap_form_for @creature do |f| %>
   <%= f.text_field :name, :placeholder => "Creature Name", :class => "form-control"%>
+  <br>
   <%= f.text_field :desc, :placeholder => "Creature Description", :class => "form-control"%>
+  <br>
+
+  <%= f.collection_check_boxes :tag_ids, @tags, :id, :name %>
+
   <%= f.submit :class => "btn btn-primary"%>
 <% end %>
 

@@ -1,0 +1,11 @@
+To do
+-Validations
+Add validations to your creature model.
+
+-creature.name should
+  -be unique
+  -be required
+  -not contain numbers or symbols
+creature.description should
+  -be required
+  -be between 10 and 255 characters
