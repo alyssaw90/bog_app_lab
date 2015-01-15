@@ -33,7 +33,7 @@
 
 <div class="col-md-3">
   <% @creature.tags.each do |tag|%>
-    <%= link_to tag.name, tag_path(tag.name)%>
+    <%= link_to tag.name, tagc_path(tag.name)%>
   <% end %>
 </div>
 

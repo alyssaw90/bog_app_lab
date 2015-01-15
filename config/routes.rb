@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :creatures
 
-  get '/creatures/tag/:tag' => 'creatures#tag', as: :tag
+  get '/creatures/tag/:tag' => 'creatures#tag', as: :tagc
 
   resources :tags
 

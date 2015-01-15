@@ -31,7 +31,6 @@ class CreaturesController < ApplicationController
 
   def show
     @creature = Creature.find_by_id(params[:id])
-
     @tags = @creature.tags.map do |tag|
       tag.name
     end
