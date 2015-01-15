@@ -6,7 +6,7 @@ class CreaturesController < ApplicationController
   end
 
   def new
-    @creature = Creature.new()
+    @creature = Creature.new
     @tags = Tag.all
   end
 
