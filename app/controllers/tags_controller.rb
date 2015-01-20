@@ -5,13 +5,17 @@ class TagsController < ApplicationController
   end
 
   def new
-    @tag = Tag.new()
+    @tag = Tag.new
   end
 
   def show
   end
 
   def create
+    @tag = Tag.all
+    @tag = Tag.create(tags_params)
+
+    redirect_to tagc_path
   end
 
   def destroy
@@ -22,6 +26,12 @@ class TagsController < ApplicationController
     # else
     #   render :index
     # end
+  end
+
+  private
+
+  def tags_params
+    params.require(:tag).permit(:name)
   end
 
 end
